@@ -1,0 +1,12 @@
+interface {{ name }} {
+  {% for field in fields %}
+    {{ field.name }}{{ "?" if field.mutable }}: {{ field.type }}
+    {%- if field.default is not none -%}
+      {% if field.type == "string" and field.default != "null" -%}
+        {{ " = " }}"{{ field.default }}"
+      {%- else %}{{ " = " }}{{ field.default }}
+      {%- endif %}
+    {%- endif -%}
+    ;
+  {% endfor %}
+}

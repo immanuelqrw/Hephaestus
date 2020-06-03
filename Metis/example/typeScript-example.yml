@@ -1,0 +1,19 @@
+---
+name: Field
+fields:
+  - name: name
+    type: string
+  - name: type
+    type: string
+    default: string
+  - name: default
+    type: string
+    default: "null"
+  - name: isMutable
+    type: boolean
+    default: false
+    mutable: true
+  - name: isLastField
+    type: boolean
+    default: false
+    lastField: true

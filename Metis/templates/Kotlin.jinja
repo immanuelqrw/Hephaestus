@@ -1,0 +1,14 @@
+data class {{ name }}(
+  {% for field in fields %}
+    {{ "var" if field.mutable else "val" }} {{ field.name }}: {{ field.type }}
+    {%- if field.default is not none -%}
+      {% if field.type in ["String", "String?"] and field.default != "null" -%}
+        {{ " = " }}"{{ field.default }}"
+      {%- else %}{{ " = " }}{{ field.default }}
+      {%- endif %}
+    {%- endif -%}
+    {%- if not field.lastField -%}
+      {{ "," }}
+    {%- endif %}
+  {% endfor %}
+)
