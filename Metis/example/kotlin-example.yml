@@ -1,19 +1,37 @@
 ---
-name: Field
-fields:
-  - name: name
-    type: String
-  - name: type
-    type: String
-    default: String
-  - name: default
-    type: String?
-    default: "null"
-  - name: isMutable
-    type: Boolean
-    default: false
-    mutable: true
-  - name: isLastField
-    type: Boolean
-    default: false
-    lastField: true
+- name: Field
+  fields:
+    - name: name
+      type: String
+    - name: type
+      type: String
+      default: String
+    - name: default
+      type: String?
+      default: "null"
+    - name: isMutable
+      type: Boolean
+      default: false
+      mutable: true
+    - name: isLastField
+      type: Boolean
+      default: false
+      lastField: true
+- name: Shield
+  fields:
+    - name: name
+      type: String
+    - name: type
+      type: String
+      default: String
+    - name: default
+      type: String?
+      default: "null"
+    - name: isMutable
+      type: Boolean
+      default: false
+      mutable: true
+    - name: isLastField
+      type: Boolean
+      default: false
+      lastField: true
