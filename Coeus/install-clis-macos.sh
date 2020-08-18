@@ -7,3 +7,5 @@ brew install asciinema
 brew install tree
 brew install eureka
 brew install fselect
+brew install neovim
+brew install dust
