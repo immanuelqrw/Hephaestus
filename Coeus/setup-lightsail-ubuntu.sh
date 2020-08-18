@@ -10,10 +10,11 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-add-repository ppa:certbot/certbot -y
- sudo apt-get update -y
- sudo apt-get install docker-ce -y
- sudo apt-get install certbot -y
- docker --version;
+sudo apt-get update -y
+sudo apt-get install docker-ce -y
+sudo apt-get install docker-compose -y
+sudo apt-get install certbot -y
+docker --version
 
 # ! replace domain
 DOMAIN=domain
